@@ -1,5 +1,5 @@
 title: awheir.com
-description: "Satellite - jekyll blog theme"
+description: "andrews cool website"
 logo_img: "/assets/img/favicon.webp"
 profile_img: "/assets/img/profile.webp"
 
@@ -37,7 +37,7 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-      date: "1900-01-01"
+      date: "01-01-1900"
 
 # Markdown newline activator 
 kramdown:

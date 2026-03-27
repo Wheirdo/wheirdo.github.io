@@ -30,8 +30,8 @@
   box-shadow:0 16px 16px 8px rgba(31, 35, 46, .15);
 }
 
-.transbox {
-  position:absolute;
+.header-box {
+  position:relative;
   top:50%;
   left:50%;
   -webkit-transform:translate(-50%, -50%);
@@ -41,8 +41,6 @@
   margin:auto;
   padding:1rem 0;
   text-align:center;
-  backdrop-filter:blur(4px);
-  background-color:rgba(255, 255, 255, 0.5);
 }
 
 .post-title {
@@ -67,6 +65,8 @@
   padding:6px;
   position:relative;
   transition:all .5s;
+  font-size:1.25rem;
+  svg { width:20px; }
 
   background:
   linear-gradient(
@@ -86,7 +86,6 @@
 
   &:hover {
     background-size:0 3px, 100% 3px;
-    box-shadow:0 3px 48px 12px rgba(100, 200, 200, 1);
   }
 
   svg { margin-right:4px; }
@@ -507,11 +506,6 @@ main {
 
 @include mq(tablet){
 
-.transbox { 
-  width:87.5%;
-  padding:2rem; 
-}
-
 .post-title { font-size:2.25rem; }
 
 .post-info { 
@@ -528,7 +522,6 @@ main {
 
   &:hover {
     background-size:0 4px, 100% 4px;
-    box-shadow:0 4px 64px 16px rgba(100, 200, 200, 1);
   }
 
   svg { margin-right:8px; }
