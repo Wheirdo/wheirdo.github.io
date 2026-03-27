@@ -50,7 +50,7 @@
     width:9rem;
     aspect-ratio:1;
     border-radius:50%;
-    outline:4.5rem solid rgba(64,64,64,0.5);
+    outline:4.5rem solid rgba(64,64,64,0.1);
     outline-offset:-4.5rem;
     transition:.3s;
 
@@ -148,18 +148,16 @@
     cursor:pointer;
 
     &:hover {
-      border:2px solid midnightblue;
-      animation:leaves .75s ease-in-out infinite alternate;
+      border:1px solid midnightblue;
+      animation:leaves .25s ease-in-out forwards;
     }
   }
 
   @keyframes leaves {
     0% {
-      transform:scale(1.0);
       background:#ffe390;
     }
     100% {
-      transform:scale(1.25);
       background:#ffd044;
     }
   }
@@ -263,11 +261,6 @@
   &:hover {
     mark { 
       color:$color-rose;
-      margin-left:40px;
-    }
-    img { 
-      left:0;
-      transform:rotateY(360deg); 
     }
   }
 }
