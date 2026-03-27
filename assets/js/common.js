@@ -36,7 +36,11 @@ document.addEventListener('DOMContentLoaded', function(){
     var firstNavs = document.querySelectorAll('#nav-first');
     var page_path = window.location.pathname.replace(/%20/g, " ");
     page_path = page_path.replace(baseurl, "");
-    var page_tree = page_path.split('/');
+    page_path = page_path.replace(/index\.html$/, "");
+    page_path = page_path.replace(/\/$/, "");
+    var page_tree = page_path.split('/').map(function (segment) {
+        return segment.replace(/\.html$/, "");
+    });
 
     Array.prototype.forEach.call(firstNavs, function (nav_first) {
         if (page_tree[1] === nav_first.ariaLabel){

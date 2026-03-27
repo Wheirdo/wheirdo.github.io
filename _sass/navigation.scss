@@ -52,7 +52,6 @@
   &.selected {
     span {
       font-weight:600;
-      text-decoration:underline;
     }
   }
 
@@ -140,28 +139,8 @@
       text-decoration:underline;
     }
 
-    transform:scale(.9);
+    transform:scale(.95);
   }
-}
-
-.nav-lh {
-  &:before {
-    content:"";
-    position:absolute;
-    display:block;
-    left:0;
-    border-radius:1.5rem;
-    background:rgba(gold, .375);
-    width:3rem;
-    height:3rem;
-    transition:.3s;
-  }
-  &:hover:before {
-    width:105%;
-    background:gold;
-  }
-
-  svg { transform:none; }
 }
 
 .nav-list-expander {
