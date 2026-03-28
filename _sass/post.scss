@@ -161,6 +161,7 @@ main {
   overflow-wrap:break-word;
   word-wrap:break-word;
 
+  > *:first-child { margin-top: 0; }
   * { margin:auto; }
 
   h1, h2, h3 {

@@ -1,10 +1,20 @@
 ---
 title: "About Me"
-thumbnail: "/assets/img/thumbnail/sample.png"
+thumbnail: "/assets/img/thumbnail/aboutme.jpg"
 bookmark: true
 ---
-
 # Howdy!
 
-My name is Andrew Wheir, and this is my about me page.
+Howdy! My name is Andrew Wheir, and I am a graduate from Texas A&M University with a BS in Computer Science and a minor in Game Design and Development. I'm currently working at HP in Boise as a Firmware Developer, but I'm looking for new opportunities back in my hometown of Houston, Texas.
 
+My favorite part of Engineering is having an idea pop into your head, and then having the knowledge and tools to be able to make it real. Like when you see a problem you face in your day-to-day life, and thinking "I could do better", and then just doing it, because you know how to. That ability to express yourself through engineering is so incredibly engaging to me.
+
+When I moved to Boise Idaho for my job at HP, I found myself drawn to the community of enthusiastic makers that had grown from the local library. The Unbound Library has a large array of 3D Printers, Laser Cutters and even a desktop CNC machine that are free for the public to use to create whatever they want. I grew so much in my time learning how to use the CNC machine from my peers, so when I had heard there was a need for someone to teach classes on CAD, I jumped on the opportunity. I was so excited to be able to share my skill set with my community the same way they had for me. I have taught 8 classes at the library, covering the basics of 3D Modeling for Printing in Fusion 360, OnShape and Tinkercad over the past year and I just wish I could do it more often. There is nothing quite like giving others the ability to create the same way my teachers had done for me years before. 
+
+My passion for creating is also what led me to the Fisher Engineering Design Center, the maker space for A&M's Engineering students to help them learn, design, and build projects for their classes. I worked there for 3 years as a Student Technician, working with all different types of 3D Printers and Laser Cutters to manufacture student requests and fix the machines when they break. There is a surprising amount of complexity in choosing the optimal manufacturing technique for a project, and this job pushed me to know them all very well with the crazy cool projects A&M's Engineering program put on its student's shoulders.
+
+Inspiring others is also what led me to the Texas A&M Institute of Technology-Infused Learning MentorCorps. The MentorCorps was part of a research program seeking to redefine how technology is taught in K-12 classrooms. My role as a Mentor was supplementing the science curriculum in 5th and 6th grade classes with technologies like 3D Modeling, Circuit Design, and Programming. I loved this job, as it let me be a role model to the next generation of scientists and engineers, in the same way my teachers were for me.
+
+Outside of my career, I also love to create. I have a special interest in 3D Printing, and the Computer Aided Design (CAD) used to create 3D models. I've been using software like Autodesk Inventor, Fusion 360, and OnShape for about 10 years now and I'm always working on something new and exciting. I also love programming! While it is my job, it's also something I'm really passionate about. This website is partly an excuse to show off the cool programming and 3D modeling projects I'm working on.
+
+Despite all the time I spend indoors glued to a keyboard, I do venture outside my house to touch grass. I enjoy playing board games, with my most recent favorites being Abducktion, Stardew Valley: The Boardgame, and Love Letter. I've been trying to get back into reading recently, and have picked up the books This Is How They Tell Me the World Ends: The Cyber Weapons Arms Race by Nicole Perlroth and Lighthouses & Keepers: The U.S. Lighthouse Service and its Legacy by Dennis Noble, both of which are very good reads. Reading outside has been a great excuse to help me reconnect with nature, along with biking and roller skating.

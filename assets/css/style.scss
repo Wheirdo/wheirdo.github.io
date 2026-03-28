@@ -64,3 +64,21 @@ input::-webkit-search-results-decoration{
 @import "post";
 @import "search";
 @import "darkmode";
+
+.side-by-side {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.side-by-side img {
+  max-width: 45%;
+  height: auto;
+  display: block;
+}
+
+.small-img {
+  max-width: 50%;
+  height: auto;
+}
