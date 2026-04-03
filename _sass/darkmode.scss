@@ -36,6 +36,18 @@ svg { fill:#aaa; }
   svg { fill:$color-aqua; }
 }
 
+.top-buttons input[type="button"],
+.bottom-buttons input[type="button"] {
+  background-color:#313132;
+  color:#eee;
+  box-shadow: 0px 0px;
+  border-top-color: #545454;
+  border-left-color: #545454;
+  border-right-color: #545454;
+  border-bottom-color: #545454;
+}
+
+
 #contact{
   ul>li>a {
     &:hover{

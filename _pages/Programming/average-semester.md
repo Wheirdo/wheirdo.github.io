@@ -33,7 +33,8 @@ So I programmed the same functionality in Javascript! Here it is:
     <div class="body-text">
         <div class="container">
             
-            <div class="buttons" id="allButtons"></div>
+            <div class="top-buttons" id="TopRow"></div>
+            <div class="bottom-buttons" id="BottomRow"></div>
 
             <div class="schedule">
                 <img id="backgroundImage" class="background" src="/assets/img/Programming/average-semester/background.png"/>

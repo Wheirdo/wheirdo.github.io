@@ -139,6 +139,33 @@
   }
 }
 
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+}
+
+.top-buttons input[type="button"] {
+  cursor: pointer;
+  font-size: 1.125rem;
+}
+
+.bottom-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.bottom-buttons input[type="button"] {
+  cursor: pointer;
+}
+
+.background {
+  width: 100%;
+  //max-width: 500px;
+  height: auto;
+}
+
 .theme-0 {
   background:hsl(50, 65%, 50%);
   &::before { border-color:transparent hsl(50, 65%, 50%) transparent transparent; } 

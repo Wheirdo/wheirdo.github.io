@@ -3,7 +3,7 @@
 
 
 
-const container = document.getElementById("allButtons");
+const container_top = document.getElementById("TopRow");
 
 //
 // Initialize Heatmap Button
@@ -27,7 +27,7 @@ async function toggleHeatmap(isActive) {
     await render();
 }
 
-container.appendChild(heatmap_button);
+container_top.appendChild(heatmap_button);
 
 
 
@@ -43,16 +43,17 @@ select_all_button.addEventListener("click", function() {
 
 async function selectAll() {
     for (let i = 1; i <= schedule_directories.length; i++) {
-        const checkbox = document.getElementById(`image${i}`);
-        if (!checkbox.checked) {
-            checkbox.checked = true;
+        const button = document.getElementById(`image${i}`);
+
+        if (!button.classList.contains("selected")) {
+            button.classList.add("selected");
             await updateSelectedSchedules(i, true);
         }
     }
     //No need to call render since it is called in updateSelectedSchedules
 }
 
-container.appendChild(select_all_button);
+container_top.appendChild(select_all_button);
 
 
 //
@@ -70,18 +71,19 @@ async function deselectAll() {
     selected_schedules = [];
 
     for (let i = 1; i <= schedule_directories.length; i++) {
-        const checkbox = document.getElementById(`image${i}`);
-        checkbox.checked = false;
+        const button = document.getElementById(`image${i}`);
+        if (button.classList.contains("selected")) {
+            button.classList.remove("selected");
+        }
     }
 
     await render();
 }
-
-container.appendChild(deselect_all_button);
-container.appendChild(document.createElement("br"));
+container_top.appendChild(deselect_all_button);
 
 
-//Initialize Schedule Checkboxes
+//Initialize Schedule Buttons
+const container_bottom = document.getElementById("BottomRow");
 //1D Array, stores which schedules are selected (i.e [1,2,4])
 let selected_schedules = [];
 
@@ -93,42 +95,45 @@ const schedule_names =  ["Freshman Fall", "Freshman Spring",
 ]
 
                     
-//Generate checkboxes and put them inside of "allButtons"
+//Generate buttons and put them inside of "allButtons"
 for (let i = 1; i <= schedule_directories.length; i++) {
-    const a_checkbox = document.createElement("input");
+    const a_button = document.createElement("input");
 
-    a_checkbox.type = "checkbox";
-    a_checkbox.id = `image${i}`;
-    a_checkbox.addEventListener("change", function() {
-        updateSelectedSchedules(i, a_checkbox.checked);
+    a_button.type = "button";
+    a_button.id = `image${i}`;
+    a_button.addEventListener("click", function() {
+        const isSelected = a_button.classList.toggle("selected");
+        updateSelectedSchedules(i, isSelected);
     });
 
-    const label = document.createElement("label");
-    label.htmlFor = `image${i}`;
-    label.textContent = schedule_names[i-1];
+    a_button.value = schedule_names[i-1];
 
-    container.appendChild(a_checkbox);
-    container.appendChild(label);
-    
-    if (i % 4 == 0) {
-        container.appendChild(document.createElement("br"));
-    }
+    container_bottom.appendChild(a_button);
 }
 
 
+//Todo WIP
+//const button_colors = [[215,68,96],[255,158,7],[255,232,61],[121,206,18],[0,183,235],[76,103,255],[174,76,255],[255,109,158]];
+
 
 //Updates list of schedules everytime a checkbox is clicked
-async function updateSelectedSchedules(scheduleNumber, isChecked) {
-    if (isChecked) {
+async function updateSelectedSchedules(scheduleNumber, isSelected) {
+    const button = document.getElementById(`image${scheduleNumber}`);
+
+    if (isSelected) {
         selected_schedules.push(scheduleNumber);
+        button.classList.add("selected");
+        //Todo wip
+        //button.style.backgroundColor = `rgb(${button_colors[scheduleNumber-1][0]}, ${button_colors[scheduleNumber-1][1]}, ${button_colors[scheduleNumber-1][2]})`;
     }
     else {
         const index = selected_schedules.indexOf(scheduleNumber);
         if (index !== -1) {
             selected_schedules.splice(index, 1);
         }
+        //button.style.backgroundColor = `rgb(49,49,50)`;
     }
 
-    await updateLayerCount(scheduleNumber, isChecked);
+    await updateLayerCount(scheduleNumber, isSelected);
     await render();
 }

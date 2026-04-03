@@ -62,7 +62,6 @@ async function renderHeatmap() {
     //Pre-compute the blended heatmap based on pixel_layer_count_array
     const colors = [];
     if (currentTheme === 'dark') {
-        console.log("Dark Mode");
         for (let c = 0; c < max_layers; c++) {
             let this_red   = (RED   / max_layers) * (c+1);
             let this_green = (GREEN / max_layers) * (c+1);
@@ -72,17 +71,17 @@ async function renderHeatmap() {
         }
     }
     else {
-        console.log("Light Mode");
         for (let c = 0; c < max_layers; c++) {
-            let this_red   = (RED   / max_layers) * ((max_layers - c)+1);
-            let this_green = (GREEN / max_layers) * ((max_layers - c)+1);
-            let this_blue  = (BLUE  / max_layers) * ((max_layers - c)+1);
+            let reverse_index = max_layers - 1 - c;
+
+            let this_red   = (RED   / max_layers) * (reverse_index + 1);
+            let this_green = (GREEN / max_layers) * (reverse_index + 1);
+            let this_blue  = (BLUE  / max_layers) * (reverse_index + 1);
 
             colors[c] = [this_red, this_green, this_blue];
         }
     }
 
-    console.log("Colors: ", colors);
 
     for (let i = 0; i < pixel_layer_count_array.length; i++) {
         const count = pixel_layer_count_array[i];
