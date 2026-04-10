@@ -9,9 +9,9 @@ const container_top = document.getElementById("TopRow");
 // Initialize Heatmap Button
 //
 const heatmap_button = document.createElement("input");
-let is_heatmap_active = false;
+let is_heatmap_active = true;
 heatmap_button.type = "button";
-heatmap_button.value = "Switch to Heatmap";
+heatmap_button.value = "Switch to Color";
 heatmap_button.addEventListener("click", function() {
     toggleHeatmap(!is_heatmap_active);
 });
@@ -107,6 +107,14 @@ for (let i = 1; i <= schedule_directories.length; i++) {
     });
 
     a_button.value = schedule_names[i-1];
+
+    //Alternate the grid row so that Freshman Fall and Freshman Spring are on different rows
+    if (i % 2 == 1) {
+        a_button.style.gridRow = "1";
+    }
+    else {
+        a_button.style.gridRow = "2";
+    }
 
     container_bottom.appendChild(a_button);
 }
