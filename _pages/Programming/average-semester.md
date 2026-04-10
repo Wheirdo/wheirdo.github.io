@@ -4,18 +4,18 @@ tags:
     - Programming
     - Web-Dev
 date: "2024-02-11"
-thumbnail: "/assets/img/Programming/heatmap_thumbnail_dark.png"
+thumbnail: "/assets/img/thumbnail/average-semester_thumbnail-dark.png"
 ---
 # Background
 
 To register for classes at Texas A&M, you had to use their schedule builder program, which looked like this:
 
-![Default Fall 2022 Schedule](/assets/img/Programming/default_schedule.png)
+![Default Fall 2022 Schedule](/assets/img/Programming/average-semester_fall-2022.png)
 *My Junior Fall schedule, provided by Texas A&M*
 
 While this works well for planning out classes, I found it unhelpful as a reference tool. Early in the semester, I would need to check my schedule often to figure out where and when my next class was. On this schedule though, the text was small and hard to read, the colors were muted and the horizontal format didn't work well for my phone. So every semester I would made my own version using [paint.net](https://www.getpaint.net/features.html) which was I made to have a higher resolution, more readable text, and was vertical to fit better on my phone, while also included my work schedule.
 
-![Fall 2022 Schedule](/assets/img/Programming/fall_2022.png)
+![Fall 2022 Schedule](/assets/img/Programming/average-semester_default.png)
 *My Junior Fall schedule, re-created in paint.net*
 
 While I was taking a class on Data Visualization, which focused on using programs like Javascript and D3 to make data more interactive and digestable, I thought it would be an interesting idea to make a heatmap of all eight of my schedules, and see what insights I could gain from it. 
@@ -54,7 +54,7 @@ The code for The Average Semester can be found [here on Github](https://github.c
     <script>
     currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'default') {
-        document.querySelector('.thumbnail').style.backgroundImage = "url('/assets/img/Programming/heatmap_thumbnail.png')";
+        document.querySelector('.thumbnail').style.backgroundImage = "url('/assets/img/thumbnail/average-semester_thumbnail.png')";
     }
     </script>
 </body>

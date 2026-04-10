@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-thumbnail: "/assets/img/thumbnail/aboutme.jpg"
+thumbnail: "/assets/img/thumbnail/aboutme_thumbnail.jpg"
 bookmark: true
 ---
 # Howdy!
